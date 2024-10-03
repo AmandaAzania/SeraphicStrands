@@ -1,12 +1,43 @@
 ﻿body {
     background-color: #FFFBF9; /* Light pinkish color */
     margin: 0;
-    color: #333; /* Adjust text color as needed */
+    color: #333; /* General text color */
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: flex-start; /* Align items to the top */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center horizontally */
     height: 100vh; /* Full viewport height */
 }
+
+.navbar {
+    background-color: #333;
+    width: 100%; /* Ensure full width */
+    overflow: hidden; /* Clear floats */
+}
+
+    .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex; /* Use flex for horizontal alignment */
+        justify-content: center; /* Center nav items */
+    }
+
+        .navbar ul li {
+            margin: 0 15px; /* Space between items */
+        }
+
+            .navbar ul li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                .navbar ul li a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
 
 .glossy {
     background: #F6E2D3;
@@ -16,15 +47,21 @@
     width: 80%;
     max-width: 600px;
     text-align: center;
-    margin-top: 20px; /* Adjust spacing from the top as needed */
+    margin-top: 20px; /* Space below navbar */
+    position: relative;
+    z-index: 1;
 }
 
-    .glossy h1 {
+    .glossy::before,
+    .glossy::after {
+        content: none; /* Remove hair strands */
+    }
+
+    .glossy h1, .salon-name {
         font-family: 'Garamond', serif; /* Elegant serif font */
         font-size: 3rem; /* Large font size */
         color: #4B5320; /* Olive green color */
-        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5), /* Darker shadow for depth */
-        -1px -1px 2px rgba(255, 255, 255, 0.3); /* Light shadow for highlights */
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.3); /* Shadows for depth */
         margin: 0; /* Remove default margin */
         background: linear-gradient(145deg, #7CFC00, #4B5320); /* Olive green gradient */
         -webkit-background-clip: text; /* Clip background to text */
@@ -35,17 +72,5 @@
         font-family: 'Garamond', serif; /* Matching serif font */
         font-size: 1.5rem; /* Adjusted size for welcome text */
         color: #333; /* General text color */
-        margin-top: 10px; /* Spacing above the paragraph */
+        margin-top: 10px; /* Space above the paragraph */
     }
-
-.salon-name {
-    font-family: 'Garamond', serif; /* Elegant serif font */
-    font-size: 3rem; /* Large font size */
-    color: #4B5320; /* Olive green color */
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5), /* Darker shadow for depth */
-    -1px -1px 2px rgba(255, 255, 255, 0.3); /* Light shadow for highlights */
-    margin: 0; /* Remove default margin */
-    background: linear-gradient(145deg, #7CFC00, #4B5320); /* Olive green gradient */
-    -webkit-background-clip: text; /* Clip background to text */
-    color: transparent; /* Make text transparent to show background */
-}
