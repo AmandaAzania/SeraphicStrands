@@ -1,0 +1,45 @@
+﻿body {
+    background-color: #F6E2D3; /* Light nude color */
+    margin: 0;
+    color: #333; /* Adjust text color as needed */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align items to the top */
+    height: 100vh; /* Full viewport height */
+}
+
+.glossy {
+    background: rgba(255, 255, 255, 0.9); /* Original glossy milk white */
+    border-radius: 15px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1), -8px -8px 15px rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    margin-top: 20px; /* Adjust spacing from the top as needed */
+}
+
+    .glossy h1 {
+        font-family: 'Garamond', serif; /* Elegant serif font */
+        font-size: 3rem; /* Large font size */
+        color: #F6E2D3; /* Match body color */
+        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5), /* Darker shadow for depth */
+        -1px -1px 2px rgba(255, 255, 255, 0.3); /* Light shadow for highlights */
+        margin: 0; /* Remove default margin */
+        background: linear-gradient(145deg, #7CFC00, #4B5320); /* Olive green gradient */
+        -webkit-background-clip: text; /* Clip background to text */
+        color: transparent; /* Make text transparent to show background */
+    }
+
+    .glossy p {
+        font-family: 'Garamond', serif; /* Matching serif font */
+        font-size: 1.5rem; /* Adjusted size for welcome text */
+        color: #333; /* General text color */
+        margin-top: 10px; /* Spacing above the paragraph */
+    }
+
+.salon-name {
+    font-family: 'Garamond', serif; /* Consistent serif font */
+    color: #8B0000; /* A rich, dark red for contrast */
+    font-weight: bold; /* Make it stand out */
+}
